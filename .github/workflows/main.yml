@@ -25,9 +25,6 @@ jobs:
       - name: Set up database for tests
         run: php bin/console doctrine:database:create --env=test
 
-      - name: Apply migrations for tests
-        run: php bin/console doctrine:migrations:migrate --env=test
-
       - name: Run PHPStan
         run: php bin/phpstan analyse
 
