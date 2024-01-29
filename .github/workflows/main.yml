@@ -26,10 +26,10 @@ jobs:
         run: php bin/console doctrine:database:create --env=test
 
       - name: Run PHPStan
-        run: php bin/phpstan analyse
+        run: php vendor/bin/phpstan analyse
 
       - name: Run PHPCS
-        run: php bin/phpcs
+        run: php vendor/bin/phpcs
 
       - name: Run PHPUnit
-        run: php bin/phpunit
+        run: php vendor/bin/phpunit
